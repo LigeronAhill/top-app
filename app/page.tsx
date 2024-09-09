@@ -1,95 +1,59 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
+import { Button, Htag, Paragraph, Tag } from "@/components";
+import Rating from "@/components/Reting/Rating";
+import { useState } from "react";
 
 export default function Home() {
+  const [rating, setRating] = useState(4);
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    <>
+      <Htag tag="h2">Заголовок</Htag>
+      <Button appearance="primary" arrow="right">
+        Кнопка primary
+      </Button>
+      <Button appearance="ghost" arrow="down">
+        Кнопка ghost
+      </Button>
+      <Tag size="s">Дизайн</Tag>
+      <Tag color="green">-10 000 ₽</Tag>
+      <Tag color="red" href="https://hh.ru">
+        hh.ru
+      </Tag>
+      <Tag size="s" color="primary">
+        Графический дизайн
+      </Tag>
+      <Tag color="grey">10</Tag>
+      <Tag color="ghost" size="s">
+        Гарантия сотрудничества
+      </Tag>
+      <Rating rating={rating} isEditable setRating={setRating}></Rating>
+      <Paragraph size="large">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet iure
+        maxime sapiente sunt ipsam quia? Nostrum a dolorem voluptas vel possimus
+        perspiciatis iste ad, et illo aperiam, magni facilis? Consectetur?
+        Quidem adipisci iste earum aut modi asperiores ipsa, veniam quibusdam
+        dolorum delectus labore aliquam excepturi! Dolorem nemo ipsam quam ipsa
+        aliquam, aut numquam dolorum iure incidunt pariatur unde, repellendus
+        neque!
+      </Paragraph>
+      <Paragraph>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non nostrum
+        harum eveniet laboriosam tenetur dignissimos nihil ut similique mollitia
+        temporibus maiores minima quidem, repellendus voluptatibus odio commodi
+        laborum sapiente exercitationem! Explicabo aspernatur quas totam modi
+        atque repudiandae velit nam dolore ab perferendis, delectus illum ut
+        iure! Dolore quaerat aperiam illo. Suscipit adipisci nam excepturi totam
+        officiis cupiditate modi quas nemo!
+      </Paragraph>
+      <Paragraph size="small">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta odit
+        pariatur voluptate assumenda dolores, facilis quod quo vitae, temporibus
+        error tenetur nemo corporis voluptas ea commodi. Veniam repellat
+        distinctio qui? Officia libero numquam, ipsam quasi aperiam ratione
+        sapiente magni velit reprehenderit. Aliquam fugiat impedit iusto
+        aspernatur illum earum cumque molestiae? Sint rem aut alias. Fugit, ut
+        obcaecati. Enim, nisi modi.
+      </Paragraph>
+    </>
   );
 }
