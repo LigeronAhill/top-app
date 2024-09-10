@@ -1,0 +1,17 @@
+meta {
+  name: menu
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://courses-top.ru/api/top-page/find
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "firstCategory": 4
+  }
+}

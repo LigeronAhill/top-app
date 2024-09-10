@@ -1,10 +1,11 @@
-"use client";
+// "use client";
 import { Button, Htag, Paragraph, Tag } from "@/components";
-import Rating from "@/components/Reting/Rating";
-import { useState } from "react";
+// import Rating from "@/components/Reting/Rating";
+// import { useEffect, useState } from "react";
+// <Rating rating={rating} isEditable setRating={setRating}></Rating>
 
 export default function Home() {
-  const [rating, setRating] = useState(4);
+  // const [rating, setRating] = useState(4);
   return (
     <>
       <Htag tag="h2">Заголовок</Htag>
@@ -26,7 +27,6 @@ export default function Home() {
       <Tag color="ghost" size="s">
         Гарантия сотрудничества
       </Tag>
-      <Rating rating={rating} isEditable setRating={setRating}></Rating>
       <Paragraph size="large">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet iure
         maxime sapiente sunt ipsam quia? Nostrum a dolorem voluptas vel possimus
